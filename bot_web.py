@@ -118,7 +118,7 @@ file_path = 'data.json'
 with open(file_path, 'r') as file:
     data = json.load(file)
 
-@app.route('/healthcheck')
+@app.route('https://app.slack.com/client/T014FPELH9P/C068CJ14GKT')
 def BOT():
     running = True
     #active_threads = set()  # Set to keep track of active threads
