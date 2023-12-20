@@ -1,4 +1,4 @@
-# PlanktoBot
+# PlanktoBot 
 PlanktoBot is a Slack bot specialised in PlanktoScopes produced by FairScope
 
 The main aim of this project is to make and deploy a bot that uses Fairscope documentation and answers questions concerning PlanktoScope from clients in a dedicated Slack channel. 
