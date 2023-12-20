@@ -1,0 +1,4 @@
+openai
+langchain
+slack-bolt
+slack-sdk
