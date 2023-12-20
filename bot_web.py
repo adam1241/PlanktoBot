@@ -11,6 +11,8 @@ from langchain.chains.question_answering import load_qa_chain
 from langchain.chat_models import ChatOpenAI
 import time
 import json
+############## FLASK IMPORT ######################
+from flask import Flask
 
 ############# SETTINGS ###########################
 
@@ -30,6 +32,8 @@ BOT_ID = os.getenv("BOT_ID")
 
 client = WebClient(token= SLACK_TOKEN)  # Initialize a Web API client
 
+# Create the Flask application
+app = Flask(__name__)
 
 ############# LISTEN TO MESSAGES IN A CHANNEL ###########################
 def listen_to_channel(channel_id):
@@ -113,8 +117,9 @@ file_path = 'data.json'
 # Open the JSON file and load the data
 with open(file_path, 'r') as file:
     data = json.load(file)
-    
-if __name__ == "__main__":
+
+@app.route('/healthcheck')
+def BOT():
     running = True
     #active_threads = set()  # Set to keep track of active threads
     #fichier=open("/homes/m22dahba/Bureau/BOT/fetch.txt","a")
@@ -166,5 +171,9 @@ if __name__ == "__main__":
         except Exception as e:
             print(f"An error occurred: {e}")
             time.sleep(10)  # Sleep longer if an error occurs
+if __name__ == "__main__":
+    app.run()
+    BOT()
+    
 
  
