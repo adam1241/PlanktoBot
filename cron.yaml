@@ -1,4 +1,4 @@
 cron:
 - description: "Regular health check"
-  url: /healthcheck
+  url: https://app.slack.com/client/T014FPELH9P/C068CJ14GKT
   schedule: every 5 minutes
