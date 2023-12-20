@@ -29,8 +29,8 @@ A file to store all the environment variables. This is a way to centralize these
 - Listening to event in a specific channel in a slack workspace (PlanktoScope)
 - Answering the user in a thread under his message 
 ##### langchain_bot.py #####
-- Same as bot_main.py but with a LLM (gpt-4) response using Langchain
-- Uses the file `faiss_store_openai.pkl` as a database where PlanktoScope documentation is stored, and serves as a training base for the LLM used (gpt-4 in our case), then the LLM answers the question through Langchain and then posted in the Slack channel
+- Same as bot_main.py but with a LLM (gpt-4-turbo) response using Langchain
+- Uses the file `faiss_store_openai.pkl` as a database where PlanktoScope documentation is stored, and serves as a training base for the LLM used (gpt-4-turbo in our case), then the LLM answers the question through Langchain and then posted in the Slack channel
 ##### webAgent_bot.py #####
 - Same as bot_main.py but with a langchain agent "web agent" which answers by doing a google search 
 ##### data.json #####
