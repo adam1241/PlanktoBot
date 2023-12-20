@@ -1,0 +1,4 @@
+cron:
+- description: "Regular health check"
+  url: /healthcheck
+  schedule: every 5 minutes
